@@ -4,7 +4,7 @@
   "main": "partie5.1.js",
   "type": "module",
   "scripts": {
-  "info": "echo version 1.0.0"
+    "info": "echo version 1.0.0"
   },
   "keywords": [],
   "author": "",
