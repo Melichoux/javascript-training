@@ -24,7 +24,6 @@ function speciale() {
     const pourcentage = Number(readlineSync.question("Quel est le pourcentage de la promotion?"));
     console.log(`Le prix en caisse de cet article est de ${prixJeux - (prixJeux*pourcentage/100)} euro!`);
 }
-speciale()
 
 
 

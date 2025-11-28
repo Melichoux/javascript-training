@@ -21,9 +21,11 @@ let note1= (jeu1.Année * jeu1.Score)/100;
 let note2= (jeu2.Année*jeu2.Score) /100;
 
 if (note1>note2) {
-    console.log(`Le jeu le plus populaire entre ${jeu1.Titre} et ${jeu2.Titre} est: -------- ${jeu1.Titre} --------`);
+    console.log(`Le jeu le plus populaire entre ${jeu1.Titre} et ${jeu2.Titre} est: -------- ${jeu1} --------`);
+    console.log(jeu1);
 } else {
-    console.log(`Le jeu le plus populaire entre ${jeu1.Titre} et ${jeu2.Titre} est: -------- ${jeu2.Titre} --------`);
+    console.log(`Le jeu le plus populaire entre ${jeu1.Titre} et ${jeu2.Titre} est: -------- ${jeu2} --------`);
+    console.log(jeu2);
 
 }
 
