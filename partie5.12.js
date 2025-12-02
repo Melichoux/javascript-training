@@ -20,7 +20,7 @@ const jeuxRetro = [
     newGame ("DK",1999,"Aventure"),
     newGame ("MortalKombat",1993,"Combat"),
 ]
-console.log(jeuxRetro)
+// console.log(jeuxRetro)
 
 console.log(`Nouveau jeux modernes`)
 const jeuxModernes = [
@@ -28,7 +28,7 @@ const jeuxModernes = [
     newGame ("DCUO",2015,"Action"),
     newGame ("Cyberpunk",2023,"Action"),
 ]
-console.log(jeuxModernes)
+// console.log(jeuxModernes)
 
 console.log(`----------------   Fonction listeJeux   ------------------------`)
 
@@ -38,10 +38,27 @@ et "element" ne sert qu'a avertir qu'un element sera utilisé? */
     {console.log(`Voici la liste des jeux rétro: ${element.titre}`)
 })};
 
-liste(jeuxRetro)
-liste(jeuxModernes)
+// liste(jeuxRetro)
+// liste(jeuxModernes)
 
 console.log(`----------------   Fonction moyenneAnnee   ----------------------`)
 
-const somme = jeuxRetro.reduce ((a, b) => a+b.anneeSortie);
-console.log( somme/jeuxRetro.length)
+function moyenneAnnee (tableau){
+// console.log(tableau);
+const somme = tableau.reduce ((a, b) => {
+    return a+b.anneeSortie},0); // Attention: si je ne mets pas de valuer initial a mon reduce, dans ce code c'a ne marche pas! ='(
+// console.log(somme);
+return ( somme/tableau.length); //console.log ne convient pas car on rappel la function dans un console
+}
+
+// console.log(`La moyenne des années des jeux Retro est: `+ moyenneAnnee(jeuxRetro));
+// console.log(`La moyenne des années des jeux Modernes est: `+ moyenneAnnee(jeuxModernes));
+
+console.log(`----------------   Réponse Finale   ----------------------`)
+
+liste(jeuxRetro)
+console.log(jeuxRetro)
+console.log(`La moyenne des années des jeux Retro est: `+ moyenneAnnee(jeuxRetro));
+liste(jeuxModernes)
+console.log(jeuxModernes)
+console.log(`La moyenne des années des jeux Modernes est: `+ moyenneAnnee(jeuxModernes));
