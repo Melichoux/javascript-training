@@ -5,21 +5,13 @@ function addition(a, b) {
   return a + b;
 }
 
- 
-
 console.log(addition(1, 2));
-
- 
 
 function soustraction(a, b) {
   return a - b;
 }
 
- 
-
 console.log("===>", soustraction(1, addition(1, 2)));
-
- 
 
 const marques = [
   "Peugeot",
@@ -30,8 +22,6 @@ const marques = [
   },
 ];
 
- 
-
 const peugeot = {
   matricule: "ZZ-123-YY",
   marque: "Peugeot",
@@ -39,11 +29,7 @@ const peugeot = {
   couleur: "#FF0000",
 };
 
- 
-
 console.log(peugeot);
-
- 
 
 function creerVoiture(
   matriculeVoiture,
@@ -60,45 +46,29 @@ function creerVoiture(
   };
 }
 
- 
-
 let twingoBleu = creerVoiture("AB-432-DF", "Renault", 5, "#071929ff"); // permet de nommer l'objet
-
- 
 
 console.log(creerVoiture("AB-123-DF", "Renault", 5, "#00FF00"));
 console.log(creerVoiture("AB-432-DF", "Renault", 5, "#071929ff"));
 console.log(creerVoiture("AB-897-DF", "Renault", 5, "#030803ff"));
-
- 
 
 const voitureRetro = [
   creerVoiture("AB-123-DF", "Renault", 5, "#00FF00"),
   creerVoiture("AB-432-DF", "Peugeot", 5, "#071929ff"),
 ];
 
- 
-
 const voitureModerne = [
   creerVoiture("AB-780-DF", "Seat", 5, "#00FF00"),
   creerVoiture("AB-890-DF", "Ford", 5, "#071929ff"),
 ];
 
- 
-
 console.log("collection1", voitureRetro);
-console.log("collection2", voitureModerne);
-
- 
+console.log("collection2", voitureModerne) 
 
 let toto = 5
 
- 
-
 function afficherListeJeux(liste) {
   // Votre code ici
-
- 
 
   // for (const element of liste) {
   //     console.log(`Plaque d'immatriculation : ${element.matricule}, Marque de voiture: ${element.marque} `)
@@ -113,18 +83,11 @@ function afficherListeJeux(liste) {
   })};
 
  
-
-
- 
-
 afficherListeJeux(voitureRetro);
 afficherListeJeux(voitureModerne);
 
- 
 
 // Fonction classique
-
- 
 
 function multiplication (a, b) {
     return a * b;
@@ -133,8 +96,6 @@ function multiplication (a, b) {
  
 
 // Fonction flechée ES6
-
- 
 
 const multiplier = (a, b) => {
     return a * b
@@ -190,5 +151,4 @@ score.forEach(function(elmt) // la fonction est dite "anonyme" car elle n'est pa
 
 for (let index = 0; index < score.length; index++) {
   console.log(score[index] + "X"+" 2 = " + score[index]*2)
-  
 }

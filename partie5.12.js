@@ -48,7 +48,7 @@ function moyenneAnnee (tableau){
 const somme = tableau.reduce ((a, b) => {
     return a+b.anneeSortie},0); // Attention: si je ne mets pas de valuer initial a mon reduce, dans ce code c'a ne marche pas! ='(
 // console.log(somme);
-return ( somme/tableau.length); //console.log ne convient pas car on rappel la function dans un console
+return ( somme/tableau.length); //console.log ne convient pas car on rappel la function dans un console.log
 }
 
 // console.log(`La moyenne des années des jeux Retro est: `+ moyenneAnnee(jeuxRetro));

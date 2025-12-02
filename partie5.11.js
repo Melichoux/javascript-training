@@ -5,7 +5,11 @@ let jeu1 = {
   Titre:`Prince of Persia: Les sables du temps`,
   Année:`2003`,
   Genre:`Action-Aventure`,
-  Score:`9`
+  Score:`9`,
+  // affichage()
+  // {
+  //   console.log( this.Titre, this.Année,this.Genre,this.Score);
+  // },
 };
 
 let jeu2 = {
@@ -14,9 +18,9 @@ let jeu2 = {
   Genre:`Action-Aventure`,
   Score:`8`
 };
-
-console.log(jeu1,jeu2);
-
+ 
+console.log(jeu1);
+console.log(`---------------- Note des jeux------------`)
 let note1= (jeu1.Année * jeu1.Score)/100;
 let note2= (jeu2.Année*jeu2.Score) /100;
 
@@ -28,4 +32,4 @@ if (note1>note2) {
 }
 
 // Pk je ne peux pas afficher le detail de l'objet en mettant uniquement jeu1 ou jeu2 sur les lignes 24 et 26??
-// Reponse: Impossible on affiche pas un objet!!! on sort toutes les iunfos 1 par 1.
+// Reponse: Impossible on ne peut pas afficher un objet!!! on sort toutes les infos 1 par 1.
