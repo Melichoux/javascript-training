@@ -5,7 +5,13 @@ let collection = [
     {
         titre:"Space Invaders",
         anneeSortie: 1984,
-        scores:[85,87,90,78,88]
+        scores:[85,87,90,78,88],
+        moyenne (tableau) {
+            const somme = tableau.reduce ((a,b) => {
+                return a+b.scores},0)
+            return somme/tableau.scores.lenght    
+        }
+    
     },
     {
         titre:"God Of War",
@@ -41,6 +47,8 @@ for (const element of tableau)
 affichage (collection)
 
 console.log(`---------  Afficher la moyenne des scores d'un jeu   ----------`)
+
+console.log(collection.moyenne)
 
 // function moyennejeu (jeu){
 // // console.log(tableau);

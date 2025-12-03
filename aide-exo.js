@@ -1,6 +1,6 @@
 // Partie 5.12 -----------------------------------------------------------------------------
 
-javascript
+// javascript
 function addition(a, b) {
   return a + b;
 }
@@ -152,3 +152,70 @@ score.forEach(function(elmt) // la fonction est dite "anonyme" car elle n'est pa
 for (let index = 0; index < score.length; index++) {
   console.log(score[index] + "X"+" 2 = " + score[index]*2)
 }
+
+//-----------------------Objet/Method cours du 03/12 --------------------
+
+console.log("Salut");
+// Scope global
+ 
+let a = "aaa"
+// RbnB
+const appartement = {
+  id: "125321",
+  nbPiece: 4,
+  largeur: 20,
+  longeur: 30,
+  note: {
+    reparation: "Lorem Ipsum",
+    locataire: "Toto",
+  },
+  quittances: ["j01", "f02", "m03"],
+  loyer: [1500, 1500, 1200, 1200],
+  afficherInfo() {
+    let a = "bbb"
+    console.log(a);
+   
+    console.log(this.id)
+  },
+  moyenneLoyer() {
+    // Méthode native avec fonction callback (anonyme)
+    const moyenneLoyer = this.loyer.reduce(function (a, b) {
+      console.log(a);
+      console.log(b);
+      return a + b;
+    }, 0);
+ 
+    console.log("Moyenne", moyenneLoyer / this.loyer.length);
+  },
+};
+ 
+console.log(appartement);
+console.log(appartement.id);
+console.log(appartement["id"]);
+console.log(appartement.note.reparation);
+console.log(appartement.quittances[0]);
+ 
+for (const element of appartement.quittances) {
+  console.log(element);
+}
+ 
+for (const key in appartement) {
+  console.log(key);
+}
+ 
+console.log("________________________________________");
+ 
+// scope global
+function moyenneLoyer() {
+    console.log("Moyenne");
+   
+}
+console.log("----------"),
+appartement.moyenneLoyer()
+console.log("------------"),
+ 
+// methode de l'objet
+appartement.moyenneLoyer()
+ 
+// A ne pas faire
+const Array = [];

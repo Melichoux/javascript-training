@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test JavaScript</title>
+</head>
+<body>
+    <main>
+        <h1 id="titre">Hello World</h1>
+        <p id="p1">Info 1</p>
+        <p class="info">Info 2</p>
+        <p class="info">Info 3</p>
+    </main>
+
+    <!--  Tjs la derniere balise du body car la page html doit etre lu entierement avant de lancer le scrypt -->
+    <script>
+         console.log("Le message s'affiche dans la console du site suelement!");
+        //  alert("Le message apparait sur le navigateur=fenetre pop-up")
+        let elements = document.getElementsByTagName("p");
+        // elements=variable, document=objet,getElementsByTagName=method et p=parametre
+        let p1 = document.getElementById("p1");
+        let infos = document.getElementsByClassName("info");
+        
+        // console.log(elements);
+        // console.log(p1);
+        // console.log(info);
+        console.log(titre);
+        
+        
+        // Exercice: modifier le h1 en javascript
+        let h1 = document.getElementById("titre"); 
+// on créé une const pour "invoquer" la balise que l'on pourra modifier ensuite, 
+// il faudra utiliser un "document" qui indique que l'element est sur la page en cours puis,
+//on met .getElementBy Id et mettre l'id de la balise.
+        h1.textContent = "salut";
+        // on peut enfin appeler l'id.textContent avec le nouveau texte.
+
+    </script>
+</body>
+</html>
