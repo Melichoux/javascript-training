@@ -6,34 +6,61 @@ let collection = [
         titre:"Space Invaders",
         anneeSortie: 1984,
         scores:[85,87,90,78,88],
-        moyenne (tableau) {
-            const somme = tableau.reduce ((a,b) => {
-                return a+b.scores},0)
-            return somme/tableau.scores.lenght    
+        moyenne () { // pas besoin de parametre parce que la method est interne a l'objet
+            const somme = this.scores.reduce ((a,b) => {
+                // console.log("a"+a)
+                // console.log("b"+b)
+                return a+b},0) // Pas besoin de faire b.scores car c'est un tableau simple
+                return somme/this.scores.length    
         }
-    
     },
     {
         titre:"God Of War",
         anneeSortie: 1994,
-        scores:[95,87,98,58,88]
+        scores:[95,87,98,58,88],
+        moyenne () { // pas besoin de parametre parce que la method est interne a l'objet
+            const somme = this.scores.reduce ((a,b) => {
+                // console.log("a"+a)
+                // console.log("b"+b)
+                return a+b},0) // Pas besoin de faire b.scores car c'est un tableau simple
+                return somme/this.scores.length    
+        }
+
     },
     {
         titre:"Donkey Kong",
         anneeSortie: 1991,
-        scores:[90,97,90,88,89]
+        scores:[90,97,90,88,89],
+        moyenne () { // pas besoin de parametre parce que la method est interne a l'objet
+            const somme = this.scores.reduce ((a,b) => {
+                // console.log("a"+a)
+                // console.log("b"+b)
+                return a+b},0) // Pas besoin de faire b.scores car c'est un tableau simple
+                return somme/this.scores.length    // ATTENTION A L'ORTHOGRAPHE!!!!
+        }
+
     },
     {
         titre:"Fall Out",
         anneeSortie: 1999,
-        scores:[85,87,90,98,88]
+        scores:[85,87,90,98,88],
+        moyenne () { // pas besoin de parametre parce que la method est interne a l'objet
+            const somme = this.scores.reduce ((a,b) => {
+                // console.log("a"+a)
+                // console.log("b"+b)
+                return a+b},0) // Pas besoin de faire b.scores car c'est un tableau simple
+                return somme/this.scores.length    
+        }
+
     }
 ]
 
 
 console.log(`----------------   Afficher les details d'un jeu   ------------------------`)
 
-console.log (collection[0].scores)
+console.log (collection[0].scores) 
+/* Il faut préciser l'index de l'élément à afficher car comme il s'agit d'un tableau,
+ il faudraiT faire une boucle for pour tout afficher*/
 
 console.log(`---------  Afficher les details de touts les jeux de la collection   ----------`)
 
@@ -48,7 +75,7 @@ affichage (collection)
 
 console.log(`---------  Afficher la moyenne des scores d'un jeu   ----------`)
 
-console.log(collection.moyenne)
+console.log("c"+collection[0].moyenne()) // cf comm ligne 62-63
 
 // function moyennejeu (jeu){
 // // console.log(tableau);
@@ -65,8 +92,16 @@ console.log(collection.moyenne)
  => mise en évidence de la séléction du tableau "scores" d'un objet dans le tableau "collection*/
 
 
-//  console.log(`---------  Afficher la moyenne des scores de la collection   ----------`)
+ console.log(`---------  Afficher la moyenne des scores de la collection   ----------`)
 
+
+ function moyenneMoyenne() {
+    for (let index = 0; index < collection.length; index++) {
+        const Collection = collection.moyenne[index].reduce ((a,b) => 
+            {return a+b},0);
+    }
+}
+console.log(moyenneMoyenne/collection.length)
 //  function moyenneCollection (tableau,){
 //     for (let index = 0; index <= tableau.length; index++) 
 
