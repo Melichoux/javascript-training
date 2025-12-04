@@ -77,43 +77,29 @@ console.log(`---------  Afficher la moyenne des scores d'un jeu   ----------`)
 
 console.log("c"+collection[0].moyenne()) // cf comm ligne 62-63
 
-// function moyennejeu (jeu){
-// // console.log(tableau);
-// const somme = jeu.scores.reduce ((a, b) => {
-//     return a+b},0); 
-// return ( somme/jeu.scores.length); 
-// /*console.log ne convient pas car on rappelle la function dans un console.log*/
-// }
-
-// console.log(`La moyenne des scores de ${collection[0].titre} est: ${moyennejeu(collection[0])}`)
-/* console.log([ 85, 87, 90, 78, 88 ].reduce((a,b)=>a+b)); 
-=> cette ligne est équivalente a la ligne 57
- console.log(collection[0].scores.reduce((a,b)=>a+b));
- => mise en évidence de la séléction du tableau "scores" d'un objet dans le tableau "collection*/
-
 
  console.log(`---------  Afficher la moyenne des scores de la collection   ----------`)
 
 
- function moyenneMoyenne() {
-    for (let index = 0; index < collection.length; index++) {
-        const Collection = collection.moyenne[index].reduce ((a,b) => 
-            {return a+b},0);
-    }
+ function sommetotal(tableau) { // ajouter un parametre pour la réutilisation de la fonction
+    let total = tableau.reduce((a,b) => 
+        // console.log(a)
+        // console.log(b.moyenne())
+            (a+b.moyenne()),0);
+    console.log(total/tableau.length)
 }
-console.log(moyenneMoyenne/collection.length)
-//  function moyenneCollection (tableau,){
-//     for (let index = 0; index <= tableau.length; index++) 
+sommetotal(collection);
 
-//         {
-//             const sommeCollection = sommeJeu
-//             function moyennejeu (jeu)
-//             {
-//             const sommeJeu = jeu.scores.reduce ((a, b) => {
-//             return a+b},0); 
-//             return ( sommeJeu/jeu.scores.length); 
-//             }
-//         }
-// }
-// moyenneCollection(collection)
-// // console.log(`La moyenne des scores de ${collection[0].titre} est: ${moyenneCollection(collection)}`)
+console.log("____sommemoyenne for_____")
+function sommeMoyenne(tableau) { // ajouter un parametre pour la réutilisation de la fonction
+    let total = 0
+    for (let index = 0; index < tableau.length; index++) {
+        let moyennejeu = tableau[index].moyenne(); 
+        // console.log(moyennejeu);
+        total = total+moyennejeu;
+        // console.log(sommeMoyenne/collection.length)
+    }
+    return total/tableau.length
+}
+    console.log(sommeMoyenne(collection))
+

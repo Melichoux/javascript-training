@@ -28,17 +28,21 @@ let collection = [
     }
 ];
 
-    const newArray = collection.filter((elmt) => 
+    const filtreAnnee = collection.filter((elmt) => 
     /* dans ce cas element correspond a tout l'objet et pas seulement a l'une de ces proprietes*/
         {
         // console.log(elmt.anneeSortie)
-        return elmt.anneeSortie >= 2000 && elmt.genre === "Aventure"
+        return elmt.anneeSortie >= 2000
     });
 
-    console.log(newArray)
+    console.log(filtreAnnee)
 
-// fAnnee(collection)
-// function filtrerParGenre(collection, genre) {
-// }
+    console.log("-----------")
+    const filtreGenre = collection.filter((elmt) => 
+    /* dans ce cas element correspond a tout l'objet et pas seulement a l'une de ces proprietes*/
+        {
+        // console.log(elmt.anneeSortie)
+        return elmt.genre >= "Aventure"
+    });
 
-// Tests
+    console.log(filtreGenre)
